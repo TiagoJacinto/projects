@@ -48,7 +48,13 @@
           "configName": "tsconfig.lib.json"
         }
       },
-      "exclude": ["libs/backend-primitives/*"]
+      "exclude": [
+        "libs/backend-primitives/*",
+        "libs/shared-primitives/*",
+        "libs/domain-primitives/*",
+        "core-primitives/*",
+        "libs/meal-delivery-service/meal-delivery-service-users/*"
+      ]
     }
   ]
 }
