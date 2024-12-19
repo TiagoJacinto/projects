@@ -1,5 +1,24 @@
 const nx = require('@nx/eslint-plugin');
 
+const defaultDepConstraints = [
+  {
+    sourceTag: 'scope:shared',
+    onlyDependOnLibsWithTags: ['scope:shared'],
+  },
+  {
+    sourceTag: 'scope:backend',
+    onlyDependOnLibsWithTags: ['scope:shared'],
+  },
+  {
+    sourceTag: 'scope:frontend',
+    onlyDependOnLibsWithTags: ['scope:shared'],
+  },
+  {
+    sourceTag: 'type:lib',
+    onlyDependOnLibsWithTags: ['type:lib'],
+  },
+];
+
 module.exports = [
   ...nx.configs['flat/base'],
   ...nx.configs['flat/typescript'],
@@ -16,22 +35,7 @@ module.exports = [
           enforceBuildableLibDependency: true,
           allow: ['^.*/eslint(\\.base)?\\.config\\.[cm]?js$'],
           depConstraints: [
-            {
-              sourceTag: 'scope:shared',
-              onlyDependOnLibsWithTags: ['scope:shared'],
-            },
-            {
-              sourceTag: 'scope:backend',
-              onlyDependOnLibsWithTags: ['scope:shared'],
-            },
-            {
-              sourceTag: 'scope:frontend',
-              onlyDependOnLibsWithTags: ['scope:shared'],
-            },
-            {
-              sourceTag: 'type:lib',
-              onlyDependOnLibsWithTags: ['type:lib'],
-            },
+            ...defaultDepConstraints,
             {
               sourceTag: 'source:true',
               onlyDependOnLibsWithTags: ['source:true'],
@@ -44,8 +48,16 @@ module.exports = [
     },
   },
   {
-    files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
-    // Override or add rules here
-    rules: {},
+    files: ['**/*.spec.ts', '**/*.test.ts'],
+    rules: {
+      '@nx/enforce-module-boundaries': [
+        'error',
+        {
+          enforceBuildableLibDependency: true,
+          allow: ['^.*/eslint(\\.base)?\\.config\\.[cm]?js$'],
+          depConstraints: defaultDepConstraints,
+        },
+      ],
+    },
   },
 ];
