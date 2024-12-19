@@ -3,7 +3,7 @@
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/meal-delivery-service/meal-delivery-service-users/src",
   "projectType": "library",
-  "tags": ["scope:backend"],
+  "tags": ["scope:backend", "type:lib", "source:true"],
   "// targets": "to see all targets run: nx show project meal-delivery-service-users-backend --web",
   "targets": {}
 }
