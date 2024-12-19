@@ -23,8 +23,8 @@
       "@tiagojacinto/domain-primitives": [
         "libs/domain-primitives/src/index.ts"
       ],
-      "@tiagojacinto/meal-delivery-service-users": [
-        "libs/meal-delivery-service/meal-delivery-service-users/src/index.ts"
+      "@tiagojacinto/meal-delivery-service-users-backend": [
+        "libs/meal-delivery-service/users/meal-delivery-service-users/src/index.ts"
       ]
     }
   },
