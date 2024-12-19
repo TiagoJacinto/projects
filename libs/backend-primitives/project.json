@@ -1,0 +1,9 @@
+{
+  "name": "backend-primitives",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/backend-primitives/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project backend-primitives --web",
+  "targets": {}
+}
