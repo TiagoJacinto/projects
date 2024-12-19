@@ -51,8 +51,8 @@
         "libs/backend-primitives/*",
         "libs/shared-primitives/*",
         "libs/domain-primitives/*",
-        "core-primitives/*",
-        "libs/meal-delivery-service/meal-delivery-service-users/*"
+        "libs/core-primitives/*",
+        "libs/meal-delivery-service/meal-delivery-service/users/backend/*"
       ]
     }
   ]
