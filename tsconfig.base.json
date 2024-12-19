@@ -28,6 +28,9 @@
       "@tiagojacinto/domain-primitives": [
         "libs/domain-primitives/src/index.ts"
       ],
+      "@tiagojacinto/meal-delivery-service-users-acceptance-tests": [
+        "libs/meal-delivery-service/users/acceptance-tests/src/index.ts"
+      ],
       "@tiagojacinto/meal-delivery-service-users-backend": [
         "libs/meal-delivery-service/users/meal-delivery-service-users/src/index.ts"
       ],
