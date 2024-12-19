@@ -3,7 +3,7 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/core-primitives/src",
   "projectType": "library",
-  "tags": ["scope:shared", "type:lib"],
+  "tags": ["scope:shared", "type:lib", "source:true"],
   "// targets": "to see all targets run: nx show project core-primitives --web",
   "targets": {}
 }

@@ -32,6 +32,10 @@ module.exports = [
               sourceTag: 'type:lib',
               onlyDependOnLibsWithTags: ['type:lib'],
             },
+            {
+              sourceTag: 'source:true',
+              onlyDependOnLibsWithTags: ['source:true'],
+            },
           ],
         },
       ],
