@@ -1,0 +1,9 @@
+{
+  "name": "testing-primitives",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/testing-primitives/src",
+  "projectType": "library",
+  "tags": ["scope:shared", "type:lib", "source:false"],
+  "// targets": "to see all targets run: nx show project testing-primitives --web",
+  "targets": {}
+}

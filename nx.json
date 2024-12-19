@@ -48,6 +48,7 @@
         }
       },
       "exclude": [
+        "libs/testing-primitives/*",
         "libs/backend-primitives/*",
         "libs/shared-primitives/*",
         "libs/domain-primitives/*",
