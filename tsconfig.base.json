@@ -11,22 +11,17 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": [
-      "es2020",
-      "dom"
-    ],
+    "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
       "@tiagojacinto/backend-primitives": [
-        "libs/backend-primitives/src/index.ts"
+        "shared/backend-primitives/src/index.ts"
       ],
-      "@tiagojacinto/core-primitives": [
-        "libs/core-primitives/src/index.ts"
-      ],
+      "@tiagojacinto/core-primitives": ["shared/core-primitives/src/index.ts"],
       "@tiagojacinto/domain-primitives": [
-        "libs/domain-primitives/src/index.ts"
+        "shared/domain-primitives/src/index.ts"
       ],
       "@tiagojacinto/meal-delivery-service-users-acceptance-tests": [
         "libs/meal-delivery-service/users/acceptance-tests/src/index.ts"
@@ -35,12 +30,9 @@
         "libs/meal-delivery-service/users/meal-delivery-service-users/src/index.ts"
       ],
       "@tiagojacinto/testing-primitives": [
-        "libs/testing-primitives/src/index.ts"
+        "shared/testing-primitives/src/index.ts"
       ]
     }
   },
-  "exclude": [
-    "node_modules",
-    "tmp"
-  ]
+  "exclude": ["node_modules", "tmp"]
 }

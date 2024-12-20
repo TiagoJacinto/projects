@@ -1,10 +1,10 @@
 export default {
-  displayName: 'domain-primitives',
+  displayName: 'testing-primitives',
   preset: '../../jest.preset.js',
   testEnvironment: 'node',
   transform: {
     '^.+\\.[tj]s$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.spec.json' }],
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../coverage/libs/domain-primitives',
+  coverageDirectory: '../../coverage/shared/testing-primitives',
 };
