@@ -7,11 +7,11 @@ const defaultDepConstraints = [
   },
   {
     sourceTag: 'scope:backend',
-    onlyDependOnLibsWithTags: ['scope:shared'],
+    onlyDependOnLibsWithTags: ['scope:backend', 'scope:shared'],
   },
   {
     sourceTag: 'scope:frontend',
-    onlyDependOnLibsWithTags: ['scope:shared'],
+    onlyDependOnLibsWithTags: ['scope:frontend', 'scope:shared'],
   },
   {
     sourceTag: 'type:lib',
