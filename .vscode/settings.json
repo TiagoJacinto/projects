@@ -1,6 +1,5 @@
 {
   "conventionalCommits.scopes": [
-    "backend",
-    "meal-delivery-service"
+    "meal-delivery-backend"
   ]
 }
