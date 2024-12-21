@@ -17,6 +17,10 @@ const defaultDepConstraints = [
     sourceTag: 'type:lib',
     onlyDependOnLibsWithTags: ['type:lib'],
   },
+  {
+    sourceTag: 'type:app',
+    onlyDependOnLibsWithTags: ['type:lib'],
+  },
 ];
 
 module.exports = [
