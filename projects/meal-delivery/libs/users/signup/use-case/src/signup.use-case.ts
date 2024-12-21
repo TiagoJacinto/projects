@@ -6,7 +6,7 @@ import {
   UserPassword,
   UserRepository,
 } from '@tiagojacinto/meal-delivery-users-backend';
-import { SignupErrors } from './index.errors';
+import { SignupErrors } from './signup.errors';
 
 type Response = Result<Nil, SignupErrors.EmailAlreadyExists>;
 
