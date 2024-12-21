@@ -3,7 +3,7 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "shared/acceptance-test-utils/src",
   "projectType": "library",
-  "tags": [],
+  "tags": ["scope:shared", "type:lib", "source:false"],
   "// targets": "to see all targets run: nx show project acceptance-test-utils --web",
   "targets": {}
 }
