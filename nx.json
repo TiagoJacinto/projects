@@ -54,7 +54,12 @@
         "libs/domain-primitives/*",
         "libs/core-primitives/*",
         "libs/meal-delivery-service/meal-delivery-service/users/acceptance-tests/*",
-        "libs/meal-delivery-service/meal-delivery-service/users/backend/*"
+        "libs/meal-delivery-service/meal-delivery-service/users/backend/*",
+        "projects/meal-delivery/libs/users/signup/use-case/*",
+        "projects/meal-delivery/libs/users/backend/*",
+        "shared/acceptance-test-utils/*",
+        "projects/meal-delivery/libs/users/signup/acceptance-test/*",
+        "projects/meal-delivery/libs/users/signup/contracts/*"
       ]
     }
   ]
