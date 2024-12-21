@@ -1,0 +1,9 @@
+{
+  "name": "meal-delivery-users-signup-contracts",
+  "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "projects/meal-delivery/libs/users/signup/contracts/src",
+  "projectType": "library",
+  "tags": ["scope:shared", "type:lib", "source:false"],
+  "// targets": "to see all targets run: nx show project meal-delivery-users-signup-contracts --web",
+  "targets": {}
+}
