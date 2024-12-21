@@ -12,7 +12,6 @@ export function defineFeatureTest(featureFilePath: string) {
   ) =>
     defineFeature(
       loadFeature(featureFilePath, {
-        loadRelativePath: true,
         tagFilter,
       }),
       scenariosDefinitionCallback
