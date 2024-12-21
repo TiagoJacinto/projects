@@ -6,8 +6,8 @@ import {
   UseCaseError,
 } from '@tiagojacinto/core-primitives';
 import { User } from '../../domain/user.aggregate';
-import { UserRepository } from '../../repositories/user.repository';
 import { UserEmail } from '../../domain/user-email.value';
+import { UserRepository } from '../../repositories';
 
 export type GetUserByEmailDTO = {
   email: string;

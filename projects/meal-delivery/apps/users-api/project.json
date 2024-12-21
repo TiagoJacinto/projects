@@ -1,0 +1,58 @@
+{
+  "name": "meal-delivery-users-api",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "projects/meal-delivery/apps/users-api/src",
+  "projectType": "application",
+  "tags": ["scope:backend", "type:app", "source:true"],
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "platform": "node",
+        "outputPath": "dist/projects/meal-delivery/apps/users-api",
+        "format": ["cjs"],
+        "bundle": false,
+        "main": "projects/meal-delivery/apps/users-api/src/main.ts",
+        "tsConfig": "projects/meal-delivery/apps/users-api/tsconfig.app.json",
+        "assets": ["projects/meal-delivery/apps/users-api/src/assets"],
+        "generatePackageJson": true,
+        "esbuildOptions": {
+          "sourcemap": true,
+          "outExtension": {
+            ".js": ".js"
+          }
+        }
+      },
+      "configurations": {
+        "development": {},
+        "production": {
+          "esbuildOptions": {
+            "sourcemap": false,
+            "outExtension": {
+              ".js": ".js"
+            }
+          }
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "dependsOn": ["build"],
+      "options": {
+        "buildTarget": "meal-delivery-users-api:build",
+        "runBuildTargetDependencies": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "meal-delivery-users-api:build:development"
+        },
+        "production": {
+          "buildTarget": "meal-delivery-users-api:build:production"
+        }
+      }
+    }
+  }
+}

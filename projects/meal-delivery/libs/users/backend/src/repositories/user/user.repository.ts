@@ -1,6 +1,5 @@
 import { AsyncMaybe } from '@tiagojacinto/core-primitives';
-import { UserEmail } from '../domain/user-email.value';
-import { User } from '../domain/user.aggregate';
+import { User, UserEmail } from '../../domain';
 
 export interface UserRepository {
   findByEmail(email: UserEmail): AsyncMaybe<User>;

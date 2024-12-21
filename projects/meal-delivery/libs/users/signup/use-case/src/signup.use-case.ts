@@ -7,11 +7,15 @@ import {
   UserRepository,
 } from '@tiagojacinto/meal-delivery-users-backend';
 import { SignupErrors } from './signup.errors';
+import { singleton, inject } from 'tsyringe';
 
 type Response = Result<Nil, SignupErrors.EmailAlreadyExists>;
 
+@singleton()
 export class SignupUseCase implements UseCase<SignupDTO, Response> {
-  constructor(private readonly userRepository: UserRepository) {}
+  constructor(
+    @inject('UserRepository') private readonly userRepository: UserRepository
+  ) {}
 
   async execute(request: SignupDTO): Promise<Response> {
     const email = UserEmail.create(request.email);

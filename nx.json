@@ -34,7 +34,7 @@
       "options": {
         "targetName": "test"
       },
-      "exclude": ["apps/api-e2e/**/*"]
+      "exclude": ["projects/meal-delivery/apps/users-api-e2e/**/*"]
     },
     {
       "plugin": "@nx/js/typescript",
@@ -48,18 +48,17 @@
         }
       },
       "exclude": [
-        "libs/testing-primitives/*",
-        "libs/backend-primitives/*",
-        "libs/shared-primitives/*",
-        "libs/domain-primitives/*",
-        "libs/core-primitives/*",
-        "libs/meal-delivery-service/meal-delivery-service/users/acceptance-tests/*",
-        "libs/meal-delivery-service/meal-delivery-service/users/backend/*",
+        "shared/testing-primitives/*",
+        "shared/backend-primitives/*",
+        "shared/shared-primitives/*",
+        "shared/domain-primitives/*",
+        "shared/core-primitives/*",
         "projects/meal-delivery/libs/users/signup/use-case/*",
         "projects/meal-delivery/libs/users/backend/*",
         "shared/acceptance-test-utils/*",
         "projects/meal-delivery/libs/users/signup/acceptance-test/*",
-        "projects/meal-delivery/libs/users/signup/contracts/*"
+        "projects/meal-delivery/libs/users/signup/contracts/*",
+        "shared/framework-adapters/*"
       ]
     }
   ]
