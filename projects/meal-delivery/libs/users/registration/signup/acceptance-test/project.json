@@ -1,7 +1,7 @@
 {
   "name": "meal-delivery-users-signup-acceptance-test",
-  "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "projects/meal-delivery/libs/users/signup/acceptance-test/src",
+  "$schema": "../../../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "projects/meal-delivery/libs/users/registration/signup/acceptance-test/src",
   "projectType": "library",
   "tags": ["scope:shared", "type:lib", "source:false"],
   "// targets": "to see all targets run: nx show project meal-delivery-users-signup-acceptance-test --web",
