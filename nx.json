@@ -53,11 +53,11 @@
         "shared/shared-primitives/*",
         "shared/domain-primitives/*",
         "shared/core-primitives/*",
-        "projects/meal-delivery/libs/users/signup/use-case/*",
+        "projects/meal-delivery/libs/users/registration/signup/use-case/*",
         "projects/meal-delivery/libs/users/backend/*",
         "shared/acceptance-test-utils/*",
-        "projects/meal-delivery/libs/users/signup/acceptance-test/*",
-        "projects/meal-delivery/libs/users/signup/contracts/*",
+        "projects/meal-delivery/libs/users/registration/signup/acceptance-test/*",
+        "projects/meal-delivery/libs/users/registration/signup/contracts/*",
         "shared/framework-adapters/*"
       ]
     }
