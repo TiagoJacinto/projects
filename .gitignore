@@ -1,5 +1,11 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+# dotenv environment variable files
+
+*.env
+*.env.*
+!*.env.example*
+
 # compiled output
 dist
 tmp
@@ -7,6 +13,13 @@ out-tsc
 
 # dependencies
 node_modules
+
+# PNPM dependencies
+/.pnp
+.pnp.*
+
+# Docker
+*.tar
 
 # IDEs and editors
 /.idea
@@ -23,16 +36,33 @@ node_modules
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+.vscode-test
 
 # misc
+*.pem
 /.sass-cache
 /connect.lock
 /coverage
-/libpeerconnection.log
-npm-debug.log
-yarn-error.log
-testem.log
 /typings
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+dist-ssr
+*.local
+
+# Logs
+
+logs
+*.log
+/libpeerconnection.log
+testem.log
+npm-debug.log_
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
 
 # System Files
 .DS_Store
@@ -40,3 +70,56 @@ Thumbs.db
 
 .nx/cache
 .nx/workspace-data
+.cache
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+
+report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
+
+# Runtime data
+
+pids
+_.pid
+_.seed
+*.pid.lock
+
+# Compiled binary addons (https://nodejs.org/api/addons.html)
+
+build/Release
+
+# TypeScript cache
+
+*.tsbuildinfo
+
+# Optional npm cache directory
+
+.npm
+
+# Microbundle cache
+
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+
+.node_repl_history
+
+# Output of 'npm pack'
+
+*.tgz
+
+# yarn v2
+
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.yarn-integrity
+
+# vercel
+.vercel
+
+# vite
+**/vite.config.{js,ts,mjs,mts,cjs,cts}.timestamp*
