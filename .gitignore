@@ -123,3 +123,6 @@ build/Release
 
 # vite
 **/vite.config.{js,ts,mjs,mts,cjs,cts}.timestamp*
+
+vite.config.*.timestamp*
+vitest.config.*.timestamp*

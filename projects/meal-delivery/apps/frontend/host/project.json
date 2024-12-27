@@ -1,0 +1,65 @@
+{
+  "name": "host",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "projects/meal-delivery/apps/frontend/host/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/rspack:rspack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "target": "web",
+        "outputPath": "dist/projects/meal-delivery/apps/frontend/host",
+        "index": "projects/meal-delivery/apps/frontend/host/src/index.html",
+        "main": "projects/meal-delivery/apps/frontend/host/src/main.ts",
+        "tsConfig": "projects/meal-delivery/apps/frontend/host/tsconfig.app.json",
+        "rspackConfig": "projects/meal-delivery/apps/frontend/host/rspack.config.ts",
+        "assets": [
+          "projects/meal-delivery/apps/frontend/host/src/favicon.ico",
+          "projects/meal-delivery/apps/frontend/host/src/assets"
+        ]
+      },
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production",
+          "optimization": true,
+          "sourceMap": false,
+          "rspackConfig": "projects/meal-delivery/apps/frontend/host/rspack.config.prod.ts"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/rspack:module-federation-dev-server",
+      "options": {
+        "buildTarget": "host:build:development",
+        "port": 4200
+      },
+      "configurations": {
+        "development": {},
+        "production": {
+          "buildTarget": "host:build:production"
+        }
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/rspack:module-federation-static-server",
+      "defaultConfiguration": "production",
+      "options": {
+        "serveTarget": "host:serve"
+      },
+      "configurations": {
+        "development": {
+          "serveTarget": "host:serve:development"
+        },
+        "production": {
+          "serveTarget": "host:serve:production"
+        }
+      }
+    }
+  }
+}
