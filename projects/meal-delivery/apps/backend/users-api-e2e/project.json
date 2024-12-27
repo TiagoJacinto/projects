@@ -1,6 +1,6 @@
 {
   "name": "meal-delivery-users-api-e2e",
-  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "implicitDependencies": ["meal-delivery-users-api"],
   "targets": {
@@ -8,7 +8,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{e2eProjectRoot}"],
       "options": {
-        "jestConfig": "projects/meal-delivery/apps/users-api-e2e/jest.config.ts",
+        "jestConfig": "projects/meal-delivery/apps/backend/users-api-e2e/jest.config.ts",
         "passWithNoTests": true
       },
       "dependsOn": ["meal-delivery-users-api:build"]

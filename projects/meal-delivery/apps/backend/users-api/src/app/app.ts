@@ -2,11 +2,7 @@ import * as path from 'path';
 import { FastifyInstance } from 'fastify';
 import AutoLoad from '@fastify/autoload';
 import { z } from 'zod';
-import {
-  serializerCompiler,
-  validatorCompiler,
-  ZodTypeProvider,
-} from 'fastify-type-provider-zod';
+import { serializerCompiler, validatorCompiler, ZodTypeProvider } from 'fastify-type-provider-zod';
 import { container } from 'tsyringe';
 import { SignupController } from '@tiagojacinto/meal-delivery-users-signup-use-case';
 
@@ -38,7 +34,7 @@ export async function app(fastify: FastifyInstance, opts: AppOptions) {
     },
     (req, res) => {
       container.resolve(SignupController).execute({ req, res });
-    }
+    },
   );
 
   // Do not touch the following lines

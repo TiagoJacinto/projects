@@ -1,7 +1,7 @@
 {
   "name": "meal-delivery-users-api",
-  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "projects/meal-delivery/apps/users-api/src",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "projects/meal-delivery/apps/backend/users-api/src",
   "projectType": "application",
   "tags": ["scope:backend", "type:app", "source:true"],
   "targets": {
@@ -11,12 +11,12 @@
       "defaultConfiguration": "production",
       "options": {
         "platform": "node",
-        "outputPath": "dist/projects/meal-delivery/apps/users-api",
+        "outputPath": "dist/projects/meal-delivery/apps/backend/users-api",
         "format": ["cjs"],
         "bundle": false,
-        "main": "projects/meal-delivery/apps/users-api/src/main.ts",
-        "tsConfig": "projects/meal-delivery/apps/users-api/tsconfig.app.json",
-        "assets": ["projects/meal-delivery/apps/users-api/src/assets"],
+        "main": "projects/meal-delivery/apps/backend/users-api/src/main.ts",
+        "tsConfig": "projects/meal-delivery/apps/backend/users-api/tsconfig.app.json",
+        "assets": ["projects/meal-delivery/apps/backend/users-api/src/assets"],
         "generatePackageJson": true,
         "esbuildOptions": {
           "sourcemap": true,
@@ -56,7 +56,7 @@
     },
     "docker-build": {
       "dependsOn": ["build"],
-      "command": "docker build -f projects/meal-delivery/apps/users-api/Dockerfile . -t meal-delivery-users-api"
+      "command": "docker build -f projects/meal-delivery/apps/backend/users-api/Dockerfile . -t meal-delivery-users-api"
     }
   }
 }
