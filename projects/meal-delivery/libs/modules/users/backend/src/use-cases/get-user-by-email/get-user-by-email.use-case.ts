@@ -1,10 +1,4 @@
-import {
-  err,
-  ok,
-  Result,
-  UseCase,
-  UseCaseError,
-} from '@tiagojacinto/core-primitives';
+import { err, ok, Result, UseCase, UseCaseError } from '@tiagojacinto/core-primitives';
 import { User } from '../../domain/user.aggregate';
 import { UserEmail } from '../../domain/user-email.value';
 import { UserRepository } from '../../repositories';
@@ -26,9 +20,7 @@ export namespace GetUserByEmailErrors {
 
 type Response = Result<User, GetUserByEmailErrors.UserNotFound>;
 
-export class GetUserByEmailUseCase
-  implements UseCase<GetUserByEmailDTO, Response>
-{
+export class GetUserByEmailUseCase implements UseCase<GetUserByEmailDTO, Response> {
   constructor(private readonly userRepository: UserRepository) {}
 
   async execute(dto: GetUserByEmailDTO): Promise<Response> {
