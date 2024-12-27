@@ -20,7 +20,7 @@ const defaultDepConstraints = [
   },
   {
     sourceTag: 'type:app',
-    onlyDependOnLibsWithTags: ['type:lib'],
+    onlyDependOnLibsWithTags: ['type:lib', 'type:app'],
   },
 ];
 
