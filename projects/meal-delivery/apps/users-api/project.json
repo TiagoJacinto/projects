@@ -53,6 +53,10 @@
           "buildTarget": "meal-delivery-users-api:build:production"
         }
       }
+    },
+    "docker-build": {
+      "dependsOn": ["build"],
+      "command": "docker build -f projects/meal-delivery/apps/users-api/Dockerfile . -t meal-delivery-users-api"
     }
   }
 }
