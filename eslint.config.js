@@ -32,17 +32,10 @@ module.exports = [
   ...tseslint.configs.recommendedTypeChecked,
   ...tseslint.configs.stylisticTypeChecked,
   {
-    ignores: ['**/dist', 'node_modules', 'tmp', 'eslint.config.js'],
+    ignores: ['**/dist', 'node_modules', 'tmp', '*.config*.*{j,t}s'],
   },
   {
-    files: [
-      '**/*.ts',
-      '**/*.tsx',
-      '**/*.js',
-      '**/*.jsx',
-      '**/*.cjs',
-      '**/*.mjs',
-    ],
+    files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx', '**/*.cjs', '**/*.mjs'],
     languageOptions: {
       parserOptions: {
         projectService: true,
