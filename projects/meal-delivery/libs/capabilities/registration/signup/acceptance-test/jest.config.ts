@@ -1,5 +1,5 @@
 export default {
-  displayName: 'meal-delivery-users-signup-contracts',
+  displayName: 'meal-delivery-users-signup-acceptance-test',
   preset: '../../../../../../../jest.preset.js',
   testEnvironment: 'node',
   transform: {
@@ -7,5 +7,5 @@ export default {
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
   coverageDirectory:
-    '../../../../../../../coverage/projects/meal-delivery/libs/users/registration/signup/contracts',
+    '../../../../../../../coverage/projects/meal-delivery/libs/capabilities/registration/signup/acceptance-test',
 };
