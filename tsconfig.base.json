@@ -22,6 +22,9 @@
       "@tiagojacinto/acceptance-test-utils": [
         "shared/acceptance-test-utils/src/index.ts"
       ],
+      "@tiagojacinto/api-primitives": [
+        "shared/api-primitives/src/index.ts"
+      ],
       "@tiagojacinto/backend-primitives": [
         "shared/backend-primitives/src/index.ts"
       ],
