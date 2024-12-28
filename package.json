@@ -68,6 +68,7 @@
     "jsdom": "~22.1.0",
     "nx": "20.2.2",
     "prettier": "^2.6.2",
+    "puppeteer": "^23.11.1",
     "react-refresh": "~0.14.0",
     "ts-jest": "^29.1.0",
     "ts-node": "10.9.1",
