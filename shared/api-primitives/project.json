@@ -1,0 +1,9 @@
+{
+  "name": "api-primitives",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "shared/api-primitives/src",
+  "projectType": "library",
+  "tags": ["scope:shared", "type:lib", "source:true"],
+  "// targets": "to see all targets run: nx show project api-primitives --web",
+  "targets": {}
+}
