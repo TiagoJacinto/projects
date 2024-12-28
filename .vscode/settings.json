@@ -3,12 +3,7 @@
     "meal-delivery-backend",
     "meal-delivery",
     "meal-delivery-backend-users",
-    "meal-delivery-frontend"
-  ],
-  "yaml.schemas": {
-    "https://www.artillery.io/schema.json": [
-      "file:///c%3A/Users/Tiago/OneDrive/Ambiente%20de%20Trabalho/Personal/Projects/Production/Versioned/projects-2/projects/meal-delivery/docs/guess-points/3-architecture/1-non-functional-requirements/execution/performance/io-volume.yaml",
-      "file:///c%3A/Users/Tiago/OneDrive/Ambiente%20de%20Trabalho/Personal/Projects/Production/Versioned/projects-2/projects/meal-delivery/docs/guess-points/3-architecture/1-non-functional-requirements/execution/performance/io-volume..yaml"
-    ]
-  },
+    "meal-delivery-frontend",
+    "meal-delivery-testing"
+  ]
 }
