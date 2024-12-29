@@ -1,3 +1,3 @@
-export interface Client<TRequestConfig> {
-  request<TResponse>(request: TRequestConfig): Promise<TResponse>;
+export interface Client<TRequest, TResponse> {
+  request(request: TRequest): Promise<TResponse>;
 }

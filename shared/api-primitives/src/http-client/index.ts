@@ -1,1 +1,2 @@
-export * from './implementations/axios';
+export * from './implementations';
+export * from './HTTPClient';
