@@ -24,6 +24,11 @@
     "e2e-ci--**/*": {
       "dependsOn": ["^build"]
     },
+    "test": {
+      "options": {
+        "args": ["--passWithNoTests"]
+      }
+    },
     "build": {
       "cache": true,
       "dependsOn": ["^build"]
@@ -98,20 +103,58 @@
     }
   ],
   "generators": {
-    "@nx/react": {
+    "@nx/js": {
+      "library": {
+        "bundler": "none",
+        "linter": "eslint",
+        "unitTestRunner": "jest",
+        "tags": ["type:lib"]
+      }
+    },
+    "@nx/node": {
+      "library": {
+        "bundler": "none",
+        "linter": "eslint",
+        "unitTestRunner": "jest",
+        "tags": ["scope:backend", "type:lib"]
+      },
       "application": {
-        "babel": true,
+        "linter": "eslint",
+        "unitTestRunner": "jest",
+        "docker": true,
+        "swcJest": true,
+        "tags": ["scope:backend", "type:app"]
+      }
+    },
+    "@nx/react": {
+      "remote": {
+        "compiler": "swc",
         "style": "none",
         "linter": "eslint",
-        "bundler": "vite"
+        "tags": ["scope:frontend", "type:app"]
+      },
+      "host": {
+        "compiler": "swc",
+        "style": "none",
+        "linter": "eslint",
+        "tags": ["scope:frontend", "type:app"]
+      },
+      "application": {
+        "compiler": "swc",
+        "style": "none",
+        "linter": "eslint",
+        "bundler": "vite",
+        "tags": ["scope:frontend", "type:app"]
       },
       "component": {
         "style": "none"
       },
       "library": {
+        "compiler": "swc",
         "style": "none",
         "linter": "eslint",
-        "unitTestRunner": "none"
+        "unitTestRunner": "none",
+        "tags": ["scope:frontend", "type:lib"]
       }
     }
   }
