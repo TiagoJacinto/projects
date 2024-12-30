@@ -1,6 +1,10 @@
 {
   "name": "@tiagojacinto/meal-delivery-users-backend",
+  "main": "./src/index.ts",
   "version": "0.0.1",
-  "dependencies": {},
+  "dependencies": {
+    "@tiagojacinto/domain-primitives": "workspace:*",
+    "@tiagojacinto/core-primitives": "workspace:*"
+  },
   "private": true
 }

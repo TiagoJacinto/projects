@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 
-const MealDeliverySignupPage = React.lazy(() => import('meal_delivery_signup_page/Module'));
+const MealDeliverySignupPage = React.lazy(() => import('@tiagojacinto/meal-delivery-signup-page'));
 
 export function App() {
   return (

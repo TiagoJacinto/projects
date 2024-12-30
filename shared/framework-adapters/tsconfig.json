@@ -12,6 +12,9 @@
   "include": [],
   "references": [
     {
+      "path": "../backend-primitives"
+    },
+    {
       "path": "./tsconfig.lib.json"
     },
     {

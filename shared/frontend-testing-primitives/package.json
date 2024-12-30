@@ -1,6 +1,9 @@
 {
   "name": "@tiagojacinto/frontend-testing-primitives",
+  "main": "./src/index.ts",
   "version": "0.0.1",
-  "dependencies": {},
+  "dependencies": {
+    "@tiagojacinto/core-primitives": "workspace:*"
+  },
   "private": true
 }

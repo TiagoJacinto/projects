@@ -1,9 +1,10 @@
-import { SignupUseCase } from './signup.use-case';
-import { SignupErrors } from './signup.errors';
 import { FastifyController } from '@tiagojacinto/framework-adapters';
-import { FastifyReply, FastifyRequest } from 'fastify';
 import { SignupDTO } from '@tiagojacinto/meal-delivery-users-signup-contracts';
+import { FastifyReply, FastifyRequest } from 'fastify';
 import { singleton, inject } from 'tsyringe';
+
+import { SignupErrors } from './signup.errors';
+import { SignupUseCase } from './signup.use-case';
 
 type RequestContext = {
   req: FastifyRequest<{ Body: SignupDTO }>;

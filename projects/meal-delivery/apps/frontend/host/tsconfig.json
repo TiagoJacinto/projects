@@ -10,6 +10,9 @@
   "include": [],
   "references": [
     {
+      "path": "../signup-page"
+    },
+    {
       "path": "./tsconfig.app.json"
     },
     {

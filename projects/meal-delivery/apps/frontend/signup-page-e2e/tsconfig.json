@@ -15,5 +15,10 @@
     "src/**/*.test.ts",
     "src/**/*.test.js",
     "src/**/*.d.ts"
+  ],
+  "references": [
+    {
+      "path": "../signup-page"
+    }
   ]
 }

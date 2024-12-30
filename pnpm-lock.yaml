@@ -223,6 +223,89 @@ importers:
         specifier: ^1.3.1
         version: 1.6.0(@types/node@18.16.20)(@vitest/ui@1.6.0)(jsdom@22.1.0)(less@4.1.3)(sass@1.83.0)(stylus@0.64.0)(sugarss@4.0.1(postcss@8.4.49))(terser@5.37.0)
 
+  projects/meal-delivery/apps/backend/users-api:
+    dependencies:
+      '@tiagojacinto/meal-delivery-users-signup-use-case':
+        specifier: workspace:*
+        version: link:../../../libs/capabilities/registration/signup/use-case
+
+  projects/meal-delivery/apps/frontend/host:
+    dependencies:
+      '@tiagojacinto/meal-delivery-signup-page':
+        specifier: workspace:*
+        version: link:../signup-page
+
+  projects/meal-delivery/apps/frontend/signup-page: {}
+
+  projects/meal-delivery/libs/capabilities/registration/signup/acceptance-test:
+    dependencies:
+      '@tiagojacinto/acceptance-test-utils':
+        specifier: workspace:*
+        version: link:../../../../../../../shared/acceptance-test-utils
+
+  projects/meal-delivery/libs/capabilities/registration/signup/contracts:
+    dependencies:
+      '@tiagojacinto/api-primitives':
+        specifier: workspace:*
+        version: link:../../../../../../../shared/api-primitives
+
+  projects/meal-delivery/libs/capabilities/registration/signup/use-case:
+    dependencies:
+      '@tiagojacinto/core-primitives':
+        specifier: workspace:*
+        version: link:../../../../../../../shared/core-primitives
+      '@tiagojacinto/framework-adapters':
+        specifier: workspace:*
+        version: link:../../../../../../../shared/framework-adapters
+      '@tiagojacinto/meal-delivery-users-backend':
+        specifier: workspace:*
+        version: link:../../../../modules/users/backend
+      '@tiagojacinto/meal-delivery-users-signup-acceptance-test':
+        specifier: workspace:*
+        version: link:../acceptance-test
+      '@tiagojacinto/meal-delivery-users-signup-contracts':
+        specifier: workspace:*
+        version: link:../contracts
+
+  projects/meal-delivery/libs/modules/users/backend:
+    dependencies:
+      '@tiagojacinto/core-primitives':
+        specifier: workspace:*
+        version: link:../../../../../../shared/core-primitives
+      '@tiagojacinto/domain-primitives':
+        specifier: workspace:*
+        version: link:../../../../../../shared/domain-primitives
+
+  shared/acceptance-test-utils: {}
+
+  shared/api-primitives: {}
+
+  shared/backend-primitives: {}
+
+  shared/core-primitives: {}
+
+  shared/domain-primitives:
+    dependencies:
+      '@tiagojacinto/core-primitives':
+        specifier: workspace:*
+        version: link:../core-primitives
+
+  shared/framework-adapters:
+    dependencies:
+      '@tiagojacinto/backend-primitives':
+        specifier: workspace:*
+        version: link:../backend-primitives
+
+  shared/frontend-primitives: {}
+
+  shared/frontend-testing-primitives:
+    dependencies:
+      '@tiagojacinto/core-primitives':
+        specifier: workspace:*
+        version: link:../core-primitives
+
+  shared/testing-primitives: {}
+
 packages:
 
   '@adobe/css-tools@4.3.3':
