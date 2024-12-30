@@ -24,11 +24,6 @@
     "e2e-ci--**/*": {
       "dependsOn": ["^build"]
     },
-    "lint:fix": {
-      "options": {
-        "fix": true
-      }
-    },
     "test": {
       "options": {
         "args": ["--passWithNoTests"]
@@ -55,12 +50,6 @@
       "plugin": "@nx/eslint/plugin",
       "options": {
         "targetName": "lint"
-      }
-    },
-    {
-      "plugin": "@nx/eslint/plugin",
-      "options": {
-        "targetName": "lint:fix"
       }
     },
     {
