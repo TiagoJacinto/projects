@@ -1,10 +1,15 @@
-import * as path from 'path';
-import { FastifyInstance } from 'fastify';
+import 'reflect-metadata';
 import AutoLoad from '@fastify/autoload';
-import { z } from 'zod';
-import { serializerCompiler, validatorCompiler, ZodTypeProvider } from 'fastify-type-provider-zod';
-import { container } from 'tsyringe';
 import { SignupController } from '@tiagojacinto/meal-delivery-users-signup-use-case';
+import { type FastifyInstance } from 'fastify';
+import {
+  serializerCompiler,
+  validatorCompiler,
+  type ZodTypeProvider,
+} from 'fastify-type-provider-zod';
+import * as path from 'path';
+import { container } from 'tsyringe';
+import { z } from 'zod';
 
 /* eslint-disable-next-line */
 export interface AppOptions {}
@@ -32,9 +37,7 @@ export async function app(fastify: FastifyInstance, opts: AppOptions) {
         body: signupSchema,
       },
     },
-    (req, res) => {
-      container.resolve(SignupController).execute({ req, res });
-    },
+    (req, res) => container.resolve(SignupController).execute({ req, res }),
   );
 
   // Do not touch the following lines
