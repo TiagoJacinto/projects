@@ -1,6 +1,0 @@
-{
-  "name": "@tiagojacinto/meal-delivery-signup-page",
-  "main": "./src/remote-entry.ts",
-  "dependencies": {},
-  "private": true
-}

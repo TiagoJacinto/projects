@@ -1,7 +1,0 @@
-{
-  "name": "@tiagojacinto/host",
-  "dependencies": {
-    "@tiagojacinto/meal-delivery-signup-page": "workspace:*"
-  },
-  "private": true
-}
