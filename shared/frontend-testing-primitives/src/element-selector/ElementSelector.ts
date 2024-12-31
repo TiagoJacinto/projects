@@ -17,15 +17,15 @@ export type ElementDefinition = { selector: CSSSelector; type: ElementType };
 
 export type ElementSelectorConfig = Record<string, ElementDefinition>;
 
-export abstract class ElementSelector<TElement, TConfig extends ElementSelectorConfig> {
+export abstract class ElementSelector<TElement, TOptions, TConfig extends ElementSelectorConfig> {
   constructor(private readonly config: TConfig) {}
 
-  async get(nameKey: keyof TConfig, timeout?: number) {
+  async get(nameKey: keyof TConfig, options?: TOptions) {
     const elementDefinition = this.config[nameKey];
     let element: TElement | null | undefined;
 
     try {
-      element = await this.getElement(elementDefinition, timeout);
+      element = await this.getElement(elementDefinition, options);
     } catch (_) {
       console.log('Element not found');
       throw new Error(`Element ${nameKey as string} not found!`);
@@ -42,6 +42,6 @@ export abstract class ElementSelector<TElement, TConfig extends ElementSelectorC
 
   protected abstract getElement(
     element: ElementDefinition,
-    ...options: any[]
+    options?: TOptions,
   ): Promise<Maybe<TElement>>;
 }

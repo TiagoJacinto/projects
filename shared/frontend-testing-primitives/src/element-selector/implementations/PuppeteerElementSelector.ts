@@ -10,6 +10,7 @@ import {
 
 export class PuppeteerElementSelector<T extends ElementSelectorConfig> extends ElementSelector<
   ElementHandle<Element>,
+  WaitForSelectorOptions,
   T
 > {
   constructor(private readonly driver: PuppeteerPageDriver, config: T) {
@@ -18,7 +19,7 @@ export class PuppeteerElementSelector<T extends ElementSelectorConfig> extends E
 
   protected override getElement(
     element: ElementDefinition,
-    options: WaitForSelectorOptions,
+    options?: WaitForSelectorOptions,
   ): Promise<Maybe<ElementHandle<Element>>> {
     return this.driver.page.waitForSelector(element.selector, options);
   }
