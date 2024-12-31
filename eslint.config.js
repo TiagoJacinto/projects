@@ -51,6 +51,12 @@ module.exports = [
     },
     rules: {
       ...require('eslint-config-prettier').rules,
+      'no-restricted-imports': [
+        'error',
+        {
+          patterns: ['*.dev'],
+        },
+      ],
       '@typescript-eslint/no-var-requires': 'off',
       '@typescript-eslint/no-unsafe-enum-comparison': 'off',
       '@typescript-eslint/prefer-nullish-coalescing': [
@@ -140,6 +146,12 @@ module.exports = [
           depConstraints: defaultDepConstraints,
         },
       ],
+    },
+  },
+  {
+    files: ['**/*.dev.{ts, tsx, js, jsx}'],
+    rules: {
+      'no-restricted-imports': 'off',
     },
   },
 ];
