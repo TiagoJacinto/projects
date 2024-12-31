@@ -12,25 +12,10 @@
       "path": "./projects/meal-delivery/libs/capabilities/registration/signup/use-case"
     },
     {
-      "path": "./projects/meal-delivery/apps/frontend/signup-page-e2e"
-    },
-    {
-      "path": "./projects/meal-delivery/apps/backend/users-api-e2e"
-    },
-    {
       "path": "./projects/meal-delivery/libs/modules/users/backend"
     },
     {
-      "path": "./projects/meal-delivery/apps/frontend/signup-page"
-    },
-    {
-      "path": "./projects/meal-delivery/apps/frontend/host-e2e"
-    },
-    {
       "path": "./projects/meal-delivery/apps/backend/users-api"
-    },
-    {
-      "path": "./projects/meal-delivery/apps/frontend/host"
     },
     {
       "path": "./shared/frontend-testing-primitives"
