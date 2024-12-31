@@ -6,8 +6,10 @@
     "@tiagojacinto/framework-adapters": "workspace:*",
     "@tiagojacinto/meal-delivery-users-signup-contracts": "workspace:*",
     "@tiagojacinto/core-primitives": "workspace:*",
-    "@tiagojacinto/meal-delivery-users-signup-acceptance-test": "workspace:*",
     "@tiagojacinto/meal-delivery-users-backend": "workspace:*"
+  },
+  "devDependencies": {
+    "@tiagojacinto/meal-delivery-users-signup-acceptance-test": "workspace:*"
   },
   "private": true
 }
