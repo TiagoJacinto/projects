@@ -1,14 +1,17 @@
 import { type Promisable } from 'type-fest';
 
-type NextFunction = (...args: unknown[]) => Promisable<void>;
+interface RequestHandler<TRequest> {
+  execute(request: TRequest): Promise<void>;
+}
 
 type RequestContext = {
   req: unknown;
   res: unknown;
-  next?: NextFunction;
 };
 
-abstract class RequestHandler<TContext extends RequestContext> {
+export abstract class Controller<TContext extends RequestContext>
+  implements RequestHandler<TContext>
+{
   protected abstract executeImpl(ctx: TContext): Promise<void>;
 
   protected abstract handleError(error: unknown): unknown;
@@ -19,19 +22,21 @@ abstract class RequestHandler<TContext extends RequestContext> {
     } catch (error) {
       this.handleError(error);
     }
-
-    await ctx.next?.();
   }
 }
 
-export abstract class Controller<
-  TContext extends Omit<RequestContext, 'next'>,
-> extends RequestHandler<TContext> {
-  protected abstract override executeImpl(ctx: TContext): Promise<void>;
-}
+type NextFunction = (...args: unknown[]) => Promisable<void>;
 
 export abstract class Middleware<
-  TContext extends Required<RequestContext>,
-> extends RequestHandler<TContext> {
+  TContext extends RequestContext & {
+    next: NextFunction;
+  },
+> extends Controller<TContext> {
   protected abstract override executeImpl(ctx: TContext): Promise<void>;
+
+  override async execute(ctx: TContext): Promise<void> {
+    await super.execute(ctx);
+
+    await ctx.next();
+  }
 }
