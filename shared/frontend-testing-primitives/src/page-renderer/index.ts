@@ -1,2 +1,2 @@
-export * from './ElementSelector';
+export * from './PageRenderer';
 export * from './implementations';

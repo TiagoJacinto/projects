@@ -1,47 +1,44 @@
-import { type Maybe } from '@tiagojacinto/core-primitives';
+import { type NonEmptyObject } from 'type-fest';
 
-type HTMLElementTagNameSelector = keyof HTMLElementTagNameMap;
-type HTMLAllElementsSelector = '*';
-type HTMLElementIdSelector = `#${string}`;
-type HTMLElementClassSelector = `.${string}`;
+export interface ElementSelector<TElementKey, TElement> {
+  get(key: TElementKey): Promise<TElement>;
+}
 
-type CSSSelector =
-  | HTMLElementTagNameSelector
-  | HTMLElementIdSelector
-  | HTMLElementClassSelector
-  | HTMLAllElementsSelector;
-
-type ElementType = 'input' | 'button' | 'div' | 'checkbox';
-
-export type ElementDefinition = { selector: CSSSelector; type: ElementType };
-
-export type ElementSelectorConfig = Record<string, ElementDefinition>;
-
-export abstract class ElementSelector<TElement, TOptions, TConfig extends ElementSelectorConfig> {
-  constructor(private readonly config: TConfig) {}
-
-  async get(nameKey: keyof TConfig, options?: TOptions) {
-    const elementDefinition = this.config[nameKey];
-    let element: TElement | null | undefined;
+export abstract class BaseElementSelector<TElementKey, TElement>
+  implements ElementSelector<TElementKey, TElement>
+{
+  async get(key: TElementKey) {
+    let element: TElement;
 
     try {
-      element = await this.getElement(elementDefinition, options);
+      element = await this.getElement(key);
     } catch (_) {
-      console.log('Element not found');
-      throw new Error(`Element ${nameKey as string} not found!`);
-    }
-
-    if (!element) {
-      throw new Error(
-        `Could not load element's element ${nameKey as string}: maybe it's not on the page yet.`,
-      );
+      throw new Error(`Error getting element ${key as string}!`);
     }
 
     return element;
   }
 
-  protected abstract getElement(
-    element: ElementDefinition,
-    options?: TOptions,
-  ): Promise<Maybe<TElement>>;
+  protected abstract getElement(key: TElementKey): Promise<TElement>;
 }
+
+// export type ElementSelectorConfig<
+//   TElementKey extends PropertyKey,
+//   TLocatorName extends PropertyKey,
+//   TMatcher,
+// > = Record<TElementKey, NonEmptyObject<Partial<Record<TLocatorName, TMatcher>>>>;
+
+// export class ConfiguredElementSelector<
+//   TElementKey extends PropertyKey,
+//   TLocatorName extends PropertyKey,
+//   TElement,
+//   TMatcher,
+// > extends BaseElementSelector<TElementKey, TElement> {
+//   constructor(private readonly config: ElementSelectorConfig<TElementKey, TLocatorName, TMatcher>) {
+//     super();
+//   }
+
+//   protected getElement(key: TElementKey): Promise<TElement> {
+//     throw new Error('Method not implemented.');
+//   }
+// }

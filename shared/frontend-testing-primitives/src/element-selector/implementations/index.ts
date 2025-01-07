@@ -1,1 +1,1 @@
-export * from './PuppeteerElementSelector';
+export * from './ReactTestingLibraryElementSelector';
