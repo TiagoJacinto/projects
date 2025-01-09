@@ -18,12 +18,6 @@
       "path": "../../../../modules/users/backend"
     },
     {
-      "path": "../../../../../../../shared/acceptance-test-utils"
-    },
-    {
-      "path": "../acceptance-test"
-    },
-    {
       "path": "../../../../../../../shared/core-primitives"
     },
     {
@@ -36,7 +30,10 @@
       "path": "../../../../../../../shared/backend-primitives"
     },
     {
-      "path": "../../../../../../../shared/framework-adapters"
+      "path": "../../../../../../../shared/acceptance-test-utils"
+    },
+    {
+      "path": "../acceptance-test"
     },
     {
       "path": "./tsconfig.lib.json"

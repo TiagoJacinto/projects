@@ -30,9 +30,6 @@
       "path": "./shared/backend-primitives"
     },
     {
-      "path": "./shared/framework-adapters"
-    },
-    {
       "path": "./shared/testing-primitives"
     },
     {

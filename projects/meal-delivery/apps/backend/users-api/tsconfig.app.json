@@ -15,12 +15,6 @@
       "path": "../../../libs/modules/users/backend/tsconfig.lib.json"
     },
     {
-      "path": "../../../../../shared/acceptance-test-utils/tsconfig.lib.json"
-    },
-    {
-      "path": "../../../libs/capabilities/registration/signup/acceptance-test/tsconfig.lib.json"
-    },
-    {
       "path": "../../../../../shared/core-primitives/tsconfig.lib.json"
     },
     {
@@ -33,7 +27,10 @@
       "path": "../../../../../shared/backend-primitives/tsconfig.lib.json"
     },
     {
-      "path": "../../../../../shared/framework-adapters/tsconfig.lib.json"
+      "path": "../../../../../shared/acceptance-test-utils/tsconfig.lib.json"
+    },
+    {
+      "path": "../../../libs/capabilities/registration/signup/acceptance-test/tsconfig.lib.json"
     },
     {
       "path": "../../../libs/capabilities/registration/signup/use-case/tsconfig.lib.json"

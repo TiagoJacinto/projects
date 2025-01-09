@@ -10,12 +10,6 @@
       "path": "../../../libs/modules/users/backend"
     },
     {
-      "path": "../../../../../shared/acceptance-test-utils"
-    },
-    {
-      "path": "../../../libs/capabilities/registration/signup/acceptance-test"
-    },
-    {
       "path": "../../../../../shared/core-primitives"
     },
     {
@@ -28,7 +22,10 @@
       "path": "../../../../../shared/backend-primitives"
     },
     {
-      "path": "../../../../../shared/framework-adapters"
+      "path": "../../../../../shared/acceptance-test-utils"
+    },
+    {
+      "path": "../../../libs/capabilities/registration/signup/acceptance-test"
     },
     {
       "path": "../../../libs/capabilities/registration/signup/use-case"
