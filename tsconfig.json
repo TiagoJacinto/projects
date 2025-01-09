@@ -43,6 +43,9 @@
     },
     {
       "path": "./shared/api-primitives"
+    },
+    {
+      "path": "./projects/meal-delivery/libs/capabilities/registration/signup/components/react"
     }
   ]
 }

@@ -15,6 +15,9 @@
     ],
     "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
   },
+  "sync": {
+    "applyChanges": true
+  },
   "targetDefaults": {
     "@nx/esbuild:esbuild": {
       "cache": true,
