@@ -246,12 +246,12 @@ importers:
 
   projects/meal-delivery/libs/capabilities/registration/signup/use-case:
     dependencies:
+      '@tiagojacinto/backend-primitives':
+        specifier: workspace:*
+        version: link:../../../../../../../shared/backend-primitives
       '@tiagojacinto/core-primitives':
         specifier: workspace:*
         version: link:../../../../../../../shared/core-primitives
-      '@tiagojacinto/framework-adapters':
-        specifier: workspace:*
-        version: link:../../../../../../../shared/framework-adapters
       '@tiagojacinto/meal-delivery-users-backend':
         specifier: workspace:*
         version: link:../../../../modules/users/backend
@@ -285,12 +285,6 @@ importers:
       '@tiagojacinto/core-primitives':
         specifier: workspace:*
         version: link:../core-primitives
-
-  shared/framework-adapters:
-    dependencies:
-      '@tiagojacinto/backend-primitives':
-        specifier: workspace:*
-        version: link:../backend-primitives
 
   shared/frontend-primitives: {}
 

@@ -1,4 +1,4 @@
-import { FastifyController } from '@tiagojacinto/framework-adapters';
+import { FastifyController } from '@tiagojacinto/backend-primitives';
 import { SignupDTO } from '@tiagojacinto/meal-delivery-users-signup-contracts';
 import { FastifyReply, FastifyRequest } from 'fastify';
 import { singleton, inject } from 'tsyringe';

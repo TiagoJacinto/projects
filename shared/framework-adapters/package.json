@@ -1,9 +1,0 @@
-{
-  "name": "@tiagojacinto/framework-adapters",
-  "main": "./src/index.ts",
-  "version": "0.0.1",
-  "dependencies": {
-    "@tiagojacinto/backend-primitives": "workspace:*"
-  },
-  "private": true
-}
