@@ -1,9 +1,5 @@
 {
   "name": "@tiagojacinto/meal-delivery-users-signup-acceptance-test",
-  "main": "./src/index.ts",
   "version": "0.0.1",
-  "devDependencies": {
-    "@tiagojacinto/acceptance-test-utils": "workspace:*"
-  },
   "private": true
 }

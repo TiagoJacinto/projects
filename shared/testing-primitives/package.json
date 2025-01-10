@@ -1,6 +1,5 @@
 {
   "name": "@tiagojacinto/testing-primitives",
-  "main": "./src/index.ts",
   "version": "0.0.1",
   "dependencies": {},
   "private": true

@@ -1,15 +1,5 @@
 {
   "name": "@tiagojacinto/meal-delivery-users-signup-use-case",
-  "main": "./src/index.ts",
   "version": "0.0.1",
-  "dependencies": {
-    "@tiagojacinto/backend-primitives": "workspace:*",
-    "@tiagojacinto/meal-delivery-users-signup-contracts": "workspace:*",
-    "@tiagojacinto/core-primitives": "workspace:*",
-    "@tiagojacinto/meal-delivery-users-backend": "workspace:*"
-  },
-  "devDependencies": {
-    "@tiagojacinto/meal-delivery-users-signup-acceptance-test": "workspace:*"
-  },
   "private": true
 }

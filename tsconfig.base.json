@@ -4,17 +4,64 @@
     "strict": true,
     "rootDir": ".",
     "sourceMap": true,
-    "composite": true,
-    "declaration": true,
+    "declaration": false,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2020", "dom"],
+    "lib": [
+      "es2020",
+      "dom"
+    ],
     "skipLibCheck": true,
-    "skipDefaultLibCheck": true
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@tiagojacinto/acceptance-test-utils": [
+        "shared/acceptance-test-utils/src/index.ts"
+      ],
+      "@tiagojacinto/api-primitives": [
+        "shared/api-primitives/src/index.ts"
+      ],
+      "@tiagojacinto/backend-primitives": [
+        "shared/backend-primitives/src/index.ts"
+      ],
+      "@tiagojacinto/core-primitives": [
+        "shared/core-primitives/src/index.ts"
+      ],
+      "@tiagojacinto/domain-primitives": [
+        "shared/domain-primitives/src/index.ts"
+      ],
+      "@tiagojacinto/frontend-primitives": [
+        "shared/frontend-primitives/src/index.ts"
+      ],
+      "@tiagojacinto/frontend-testing-primitives": [
+        "shared/frontend-testing-primitives/src/index.ts"
+      ],
+      "@tiagojacinto/meal-delivery-users-backend": [
+        "projects/meal-delivery/libs/modules/users/backend/src/index.ts"
+      ],
+      "@tiagojacinto/meal-delivery-users-signup-acceptance-test": [
+        "projects/meal-delivery/libs/capabilities/registration/signup/acceptance-test/src/index.ts"
+      ],
+      "@tiagojacinto/meal-delivery-users-signup-contracts": [
+        "projects/meal-delivery/libs/capabilities/registration/signup/contracts/src/index.ts"
+      ],
+      "@tiagojacinto/meal-delivery-users-signup-use-case": [
+        "projects/meal-delivery/libs/capabilities/registration/signup/use-case/src/index.ts"
+      ],
+      "@tiagojacinto/react": [
+        "projects/meal-delivery/libs/capabilities/registration/signup/components/react/src/index.ts"
+      ],
+      "@tiagojacinto/testing-primitives": [
+        "shared/testing-primitives/src/index.ts"
+      ]
+    }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }

@@ -12,9 +12,6 @@
   "include": [],
   "references": [
     {
-      "path": "../core-primitives"
-    },
-    {
       "path": "./tsconfig.lib.json"
     },
     {

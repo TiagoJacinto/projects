@@ -1,9 +1,5 @@
 {
   "name": "@tiagojacinto/meal-delivery-users-signup-contracts",
-  "main": "./src/index.ts",
   "version": "0.0.1",
-  "dependencies": {
-    "@tiagojacinto/api-primitives": "workspace:*"
-  },
   "private": true
 }

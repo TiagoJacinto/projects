@@ -2,9 +2,6 @@
   "name": "@tiagojacinto/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {
-    "pnpm:devPreinstall": "nx sync"
-  },
   "private": true,
   "dependencies": {
     "@fastify/autoload": "~5.7.1",

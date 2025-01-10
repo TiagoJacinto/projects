@@ -16,7 +16,7 @@
     "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
   },
   "sync": {
-    "applyChanges": true
+    "disabledTaskSyncGenerators": ["@nx/js:typescript-sync"]
   },
   "targetDefaults": {
     "@nx/esbuild:esbuild": {

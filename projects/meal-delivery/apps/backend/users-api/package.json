@@ -1,7 +1,0 @@
-{
-  "name": "@tiagojacinto/meal-delivery-users-api",
-  "dependencies": {
-    "@tiagojacinto/meal-delivery-users-signup-use-case": "workspace:*"
-  },
-  "private": true
-}

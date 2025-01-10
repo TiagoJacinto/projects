@@ -3,16 +3,16 @@
   "compilerOptions": {
     "outDir": "../../../../../../dist/out-tsc",
     "declaration": true,
-    "types": ["node"]
+    "types": [
+      "node"
+    ]
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["jest.config.ts", "src/**/*.spec.ts", "src/**/*.test.ts"],
-  "references": [
-    {
-      "path": "../../../../../../shared/core-primitives/tsconfig.lib.json"
-    },
-    {
-      "path": "../../../../../../shared/domain-primitives/tsconfig.lib.json"
-    }
-  ]
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "jest.config.ts",
+    "src/**/*.spec.ts",
+    "src/**/*.test.ts"
+  ],
 }
