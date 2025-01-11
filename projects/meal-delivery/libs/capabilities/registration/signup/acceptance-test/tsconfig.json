@@ -12,9 +12,6 @@
   "include": [],
   "references": [
     {
-      "path": "../../../../../../../shared/acceptance-test-utils"
-    },
-    {
       "path": "./tsconfig.lib.json"
     },
     {

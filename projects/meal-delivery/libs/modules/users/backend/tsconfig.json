@@ -12,12 +12,6 @@
   "include": [],
   "references": [
     {
-      "path": "../../../../../../shared/core-primitives"
-    },
-    {
-      "path": "../../../../../../shared/domain-primitives"
-    },
-    {
       "path": "./tsconfig.lib.json"
     },
     {

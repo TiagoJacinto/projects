@@ -4,33 +4,6 @@
   "include": [],
   "references": [
     {
-      "path": "../../../../../shared/domain-primitives"
-    },
-    {
-      "path": "../../../libs/modules/users/backend"
-    },
-    {
-      "path": "../../../../../shared/acceptance-test-utils"
-    },
-    {
-      "path": "../../../libs/capabilities/registration/signup/acceptance-test"
-    },
-    {
-      "path": "../../../../../shared/core-primitives"
-    },
-    {
-      "path": "../../../../../shared/api-primitives"
-    },
-    {
-      "path": "../../../libs/capabilities/registration/signup/contracts"
-    },
-    {
-      "path": "../../../../../shared/backend-primitives"
-    },
-    {
-      "path": "../../../libs/capabilities/registration/signup/use-case"
-    },
-    {
       "path": "./tsconfig.app.json"
     },
     {
