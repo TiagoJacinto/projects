@@ -12,30 +12,6 @@
   "include": [],
   "references": [
     {
-      "path": "../../../../../../../shared/domain-primitives"
-    },
-    {
-      "path": "../../../../modules/users/backend"
-    },
-    {
-      "path": "../../../../../../../shared/acceptance-test-utils"
-    },
-    {
-      "path": "../acceptance-test"
-    },
-    {
-      "path": "../../../../../../../shared/core-primitives"
-    },
-    {
-      "path": "../../../../../../../shared/api-primitives"
-    },
-    {
-      "path": "../contracts"
-    },
-    {
-      "path": "../../../../../../../shared/backend-primitives"
-    },
-    {
       "path": "./tsconfig.lib.json"
     },
     {
