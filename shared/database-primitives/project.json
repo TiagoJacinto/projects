@@ -1,0 +1,19 @@
+{
+  "name": "database-primitives",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "shared/database-primitives/src",
+  "projectType": "library",
+  "tags": ["type:lib"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:swc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/shared/database-primitives",
+        "main": "shared/database-primitives/src/index.ts",
+        "tsConfig": "shared/database-primitives/tsconfig.lib.json",
+        "assets": ["shared/database-primitives/*.md"]
+      }
+    }
+  }
+}
