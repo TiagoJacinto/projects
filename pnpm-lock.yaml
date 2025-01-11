@@ -289,6 +289,12 @@ importers:
         specifier: ~0.5.11
         version: 0.5.15
 
+  shared/database-primitives:
+    dependencies:
+      '@swc/helpers':
+        specifier: ~0.5.11
+        version: 0.5.15
+
   shared/domain-primitives:
     dependencies:
       '@swc/helpers':
