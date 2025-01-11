@@ -226,28 +226,71 @@ importers:
         specifier: ^1.3.1
         version: 1.6.0(@types/node@18.16.20)(@vitest/ui@1.6.0)(jsdom@22.1.0)(less@4.1.3)(sass@1.83.0)(stylus@0.64.0)(terser@5.37.0)
 
-  projects/meal-delivery/libs/capabilities/registration/signup/acceptance-test: {}
+  projects/meal-delivery/libs/capabilities/registration/signup/acceptance-test:
+    dependencies:
+      '@swc/helpers':
+        specifier: ~0.5.11
+        version: 0.5.15
 
-  projects/meal-delivery/libs/capabilities/registration/signup/contracts: {}
+  projects/meal-delivery/libs/capabilities/registration/signup/contracts:
+    dependencies:
+      '@swc/helpers':
+        specifier: ~0.5.11
+        version: 0.5.15
 
-  projects/meal-delivery/libs/capabilities/registration/signup/use-case: {}
+  projects/meal-delivery/libs/capabilities/registration/signup/use-case:
+    dependencies:
+      '@swc/helpers':
+        specifier: ~0.5.11
+        version: 0.5.15
 
-  projects/meal-delivery/libs/modules/users/backend: {}
+  projects/meal-delivery/libs/modules/users/backend:
+    dependencies:
+      tslib:
+        specifier: ^2.3.0
+        version: 2.8.1
 
-  shared/acceptance-test-utils: {}
+  shared/acceptance-test-utils:
+    dependencies:
+      '@swc/helpers':
+        specifier: ~0.5.11
+        version: 0.5.15
 
-  shared/api-primitives: {}
+  shared/api-primitives:
+    dependencies:
+      '@swc/helpers':
+        specifier: ~0.5.11
+        version: 0.5.15
 
-  shared/backend-primitives: {}
+  shared/backend-primitives:
+    dependencies:
+      '@swc/helpers':
+        specifier: ~0.5.11
+        version: 0.5.15
 
-  shared/core-primitives: {}
+  shared/core-primitives:
+    dependencies:
+      '@swc/helpers':
+        specifier: ~0.5.11
+        version: 0.5.15
 
-  shared/domain-primitives: {}
+  shared/domain-primitives:
+    dependencies:
+      '@swc/helpers':
+        specifier: ~0.5.11
+        version: 0.5.15
 
-  shared/frontend-primitives: {}
+  shared/frontend-primitives:
+    dependencies:
+      '@swc/helpers':
+        specifier: ~0.5.11
+        version: 0.5.15
 
   shared/frontend-testing-primitives:
     dependencies:
+      '@swc/helpers':
+        specifier: ~0.5.11
+        version: 0.5.15
       '@testing-library/react':
         specifier: 16.1.0
         version: 16.1.0(@testing-library/dom@10.4.0)(@types/react-dom@18.3.0)(@types/react@18.3.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -255,7 +298,11 @@ importers:
         specifier: 14.5.2
         version: 14.5.2(@testing-library/dom@10.4.0)
 
-  shared/testing-primitives: {}
+  shared/testing-primitives:
+    dependencies:
+      '@swc/helpers':
+        specifier: ~0.5.11
+        version: 0.5.15
 
 packages:
 

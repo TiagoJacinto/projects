@@ -5,5 +5,16 @@
   "projectType": "library",
   "tags": ["scope:shared", "type:lib", "source:true"],
   "// targets": "to see all targets run: nx show project domain-primitives --web",
-  "targets": {}
+  "targets": {
+    "build": {
+      "executor": "@nx/js:swc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/shared/domain-primitives",
+        "main": "shared/domain-primitives/src/index.ts",
+        "tsConfig": "shared/domain-primitives/tsconfig.lib.json",
+        "assets": ["shared/domain-primitives/*.md"]
+      }
+    }
+  }
 }

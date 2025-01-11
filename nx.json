@@ -6,7 +6,7 @@
     "production": [
       "default",
       "!{projectRoot}/.eslintrc.json",
-      "!{projectRoot}/eslint.config.js",
+      "!{projectRoot}/eslint.config.cjs",
       "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
       "!{projectRoot}/tsconfig.spec.json",
       "!{projectRoot}/jest.config.[jt]s",
@@ -46,6 +46,16 @@
       ],
       "dependsOn": ["^build"],
       "cache": true
+    },
+    "@nx/js:swc": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
+    },
+    "@nx/js:tsc": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
     }
   },
   "plugins": [
@@ -72,22 +82,7 @@
           "targetName": "build",
           "configName": "tsconfig.lib.json"
         }
-      },
-      "exclude": [
-        "shared/acceptance-test-utils/*",
-        "shared/api-primitives/*",
-        "shared/backend-primitives/*",
-        "shared/core-primitives/*",
-        "shared/domain-primitives/*",
-        "shared/frontend-primitives/*",
-        "shared/frontend-testing-primitives/*",
-        "shared/testing-primitives/*",
-        "projects/meal-delivery/libs/modules/users/backend/*",
-        "projects/meal-delivery/libs/capabilities/registration/signup/acceptance-test/*",
-        "projects/meal-delivery/libs/capabilities/registration/signup/components/react/*",
-        "projects/meal-delivery/libs/capabilities/registration/signup/contracts/*",
-        "projects/meal-delivery/libs/capabilities/registration/signup/use-case/*"
-      ]
+      }
     },
     {
       "plugin": "@nx/vite/plugin",
@@ -110,7 +105,7 @@
   "generators": {
     "@nx/js": {
       "library": {
-        "bundler": "none",
+        "bundler": "swc",
         "linter": "eslint",
         "unitTestRunner": "jest",
         "tags": ["type:lib"]
@@ -118,9 +113,11 @@
     },
     "@nx/node": {
       "library": {
-        "bundler": "none",
+        "compiler": "swc",
+        "strict": true,
         "linter": "eslint",
         "unitTestRunner": "jest",
+        "testEnvironment": "node",
         "tags": ["scope:backend", "type:lib"]
       },
       "application": {
