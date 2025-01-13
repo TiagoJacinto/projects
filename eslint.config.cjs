@@ -71,7 +71,7 @@ module.exports = [
       ],
       '@typescript-eslint/no-namespace': 'off',
       '@typescript-eslint/unbound-method': 'off',
-      'jest/unbound-method': 'error',
+      'jest/unbound-method': ['error', { ignoreStatic: true }],
       '@typescript-eslint/no-explicit-any': [
         'error',
         {
