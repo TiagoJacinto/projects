@@ -1,19 +1,20 @@
 import { err, Nil, ok, Result, UseCase } from '@tiagojacinto/core-primitives';
-import { SignupDTO } from '@tiagojacinto/meal-delivery-users-signup-contracts';
 import {
   User,
   UserEmail,
   UserPassword,
   UserRepository,
 } from '@tiagojacinto/meal-delivery-users-backend';
-import { SignupErrors } from './signup.errors';
+import { SignupDTO } from '@tiagojacinto/meal-delivery-users-signup-contracts';
 import { singleton, inject } from 'tsyringe';
+
+import { SignupErrors } from './signup.errors';
 
 type Response = Result<Nil, SignupErrors.EmailAlreadyExists>;
 
 @singleton()
 export class SignupUseCase implements UseCase<SignupDTO, Response> {
-  constructor(@inject('UserRepository') private readonly userRepository: UserRepository) {}
+  constructor(@inject(UserRepository) private readonly userRepository: UserRepository) {}
 
   async execute(request: SignupDTO): Promise<Response> {
     const email = UserEmail.create(request.email);

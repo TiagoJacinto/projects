@@ -43,7 +43,7 @@
       "dependsOn": ["build"],
       "options": {
         "buildTarget": "meal-delivery-users-api:build",
-        "runBuildTargetDependencies": false
+        "runBuildTargetDependencies": true
       },
       "configurations": {
         "development": {

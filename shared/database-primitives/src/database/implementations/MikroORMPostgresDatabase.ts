@@ -31,11 +31,7 @@ export class MikroORMPostgresDatabase implements Database<MikroORMPostgresClient
       throw new Error('Database already connected');
     }
 
-    console.log('CONNECTING TO DATABASE');
-
     this.connection = await PgMikroORM.init(options);
-
-    console.log('CONNECTED TO DATABASE');
   }
 
   getConnection() {

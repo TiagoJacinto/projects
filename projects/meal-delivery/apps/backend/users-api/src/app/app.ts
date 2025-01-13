@@ -1,5 +1,7 @@
 import 'reflect-metadata';
 import AutoLoad from '@fastify/autoload';
+import { RequestContext } from '@mikro-orm/core';
+import { MikroORMClient } from '@tiagojacinto/database-primitives';
 import { SignupController } from '@tiagojacinto/meal-delivery-users-signup-use-case';
 import { type FastifyInstance } from 'fastify';
 import {
@@ -10,6 +12,8 @@ import {
 import * as path from 'path';
 import { container } from 'tsyringe';
 import { z } from 'zod';
+
+import { config } from '../main';
 
 /* eslint-disable-next-line */
 export interface AppOptions {}
@@ -27,6 +31,12 @@ export async function app(fastify: FastifyInstance, opts: AppOptions) {
   fastify.setValidatorCompiler(validatorCompiler);
   fastify.setSerializerCompiler(serializerCompiler);
   fastify.withTypeProvider<ZodTypeProvider>();
+
+  if (config.env === 'production') {
+    fastify.addHook('onRequest', (req, reply, done) => {
+      RequestContext.create(container.resolve<MikroORMClient>(MikroORMClient).em, done);
+    });
+  }
 
   fastify.post<{
     Body: SignupSchema;
