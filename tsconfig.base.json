@@ -29,6 +29,9 @@
       "@tiagojacinto/meal-delivery-users-backend": [
         "projects/meal-delivery/libs/modules/users/backend/src/index.ts"
       ],
+      "@tiagojacinto/meal-delivery-users-contracts": [
+        "projects/meal-delivery/libs/modules/users/contracts/src/index.ts"
+      ],
       "@tiagojacinto/meal-delivery-users-signup-acceptance-test": [
         "projects/meal-delivery/libs/capabilities/registration/signup/acceptance-test/src/index.ts"
       ],

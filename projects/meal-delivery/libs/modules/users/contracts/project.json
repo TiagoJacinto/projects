@@ -1,0 +1,19 @@
+{
+  "name": "meal-delivery-users-contracts",
+  "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "projects/meal-delivery/libs/modules/users/contracts/src",
+  "projectType": "library",
+  "tags": ["scope:shared", "type:lib", "source:true"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:swc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/projects/meal-delivery/libs/modules/users/contracts",
+        "main": "projects/meal-delivery/libs/modules/users/contracts/src/index.ts",
+        "tsConfig": "projects/meal-delivery/libs/modules/users/contracts/tsconfig.lib.json",
+        "assets": ["projects/meal-delivery/libs/modules/users/contracts/*.md"]
+      }
+    }
+  }
+}
