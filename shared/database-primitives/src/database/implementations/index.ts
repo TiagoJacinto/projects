@@ -1,1 +1,1 @@
-export * from './MikroORMPostgresDatabase';
+export * from './MikroORMDatabase';
