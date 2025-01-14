@@ -1,0 +1,19 @@
+{
+  "name": "backend-testing-primitives",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "shared/backend-testing-primitives/src",
+  "projectType": "library",
+  "tags": ["scope:backend", "type:lib", "source:false"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:swc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/shared/backend-testing-primitives",
+        "main": "shared/backend-testing-primitives/src/index.ts",
+        "tsConfig": "shared/backend-testing-primitives/tsconfig.lib.json",
+        "assets": ["shared/backend-testing-primitives/*.md"]
+      }
+    }
+  }
+}

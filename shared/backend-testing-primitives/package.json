@@ -1,0 +1,14 @@
+{
+  "name": "@tiagojacinto/backend-testing-primitives",
+  "version": "0.0.1",
+  "dependencies": {
+    "@swc/helpers": "~0.5.11"
+  },
+  "devDependencies": {
+    "supertest": "7.0.0"
+  },
+  "type": "commonjs",
+  "main": "./src/index.js",
+  "typings": "./src/index.d.ts",
+  "private": true
+}
