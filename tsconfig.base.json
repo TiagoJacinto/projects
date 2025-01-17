@@ -11,38 +11,21 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": [
-      "es2020",
-      "dom"
-    ],
+    "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@tiagojacinto/acceptance-test-utils": [
-        "shared/acceptance-test-utils/src/index.ts"
-      ],
-      "@tiagojacinto/api-primitives": [
-        "shared/api-primitives/src/index.ts"
-      ],
-      "@tiagojacinto/backend-primitives": [
-        "shared/backend-primitives/src/index.ts"
-      ],
+      "@tiagojacinto/acceptance-test-utils": ["shared/acceptance-test-utils/src/index.ts"],
+      "@tiagojacinto/api-primitives": ["shared/api-primitives/src/index.ts"],
+      "@tiagojacinto/backend-primitives": ["shared/backend-primitives/src/index.ts"],
       "@tiagojacinto/backend-testing-primitives": [
         "shared/backend-testing-primitives/src/index.ts"
       ],
-      "@tiagojacinto/core-primitives": [
-        "shared/core-primitives/src/index.ts"
-      ],
-      "@tiagojacinto/database-primitives": [
-        "shared/database-primitives/src/index.ts"
-      ],
-      "@tiagojacinto/domain-primitives": [
-        "shared/domain-primitives/src/index.ts"
-      ],
-      "@tiagojacinto/frontend-primitives": [
-        "shared/frontend-primitives/src/index.ts"
-      ],
+      "@tiagojacinto/core-primitives": ["shared/core-primitives/src/index.ts"],
+      "@tiagojacinto/database-primitives": ["shared/database-primitives/src/index.ts"],
+      "@tiagojacinto/domain-primitives": ["shared/domain-primitives/src/index.ts"],
+      "@tiagojacinto/frontend-primitives": ["shared/frontend-primitives/src/index.ts"],
       "@tiagojacinto/frontend-testing-primitives": [
         "shared/frontend-testing-primitives/src/index.ts"
       ],
@@ -64,13 +47,8 @@
       "@tiagojacinto/meal-delivery-users-signup-use-case": [
         "projects/meal-delivery/libs/capabilities/registration/signup/use-case/src/index.ts"
       ],
-      "@tiagojacinto/testing-primitives": [
-        "shared/testing-primitives/src/index.ts"
-      ]
+      "@tiagojacinto/testing-primitives": ["shared/testing-primitives/src/index.ts"]
     }
   },
-  "exclude": [
-    "node_modules",
-    "tmp"
-  ]
+  "exclude": ["node_modules", "tmp"]
 }
