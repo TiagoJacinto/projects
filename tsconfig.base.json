@@ -47,7 +47,10 @@
       "@tiagojacinto/meal-delivery-users-signup-use-case": [
         "projects/meal-delivery/libs/capabilities/registration/signup/use-case/src/index.ts"
       ],
-      "@tiagojacinto/testing-primitives": ["shared/testing-primitives/src/index.ts"]
+      "@tiagojacinto/testing-primitives": ["shared/testing-primitives/src/index.ts"],
+      "meal_delivery_signup_page/Module": [
+        "projects/meal-delivery/apps/frontend/signup-page/src/remote-entry.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

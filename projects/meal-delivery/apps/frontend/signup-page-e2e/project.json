@@ -1,0 +1,9 @@
+{
+  "name": "meal_delivery_signup_page-e2e",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "projects/meal-delivery/apps/frontend/signup-page-e2e/src",
+  "implicitDependencies": ["meal_delivery_signup_page"],
+  "// targets": "to see all targets run: nx show project meal_delivery_signup_page-e2e --web",
+  "targets": {}
+}
