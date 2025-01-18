@@ -344,12 +344,6 @@ importers:
         specifier: ~0.5.11
         version: 0.5.15
 
-  shared/utils:
-    dependencies:
-      '@swc/helpers':
-        specifier: ~0.5.11
-        version: 0.5.15
-
 packages:
 
   '@adobe/css-tools@4.3.3':
