@@ -1,13 +1,6 @@
 import { type RequestHandler } from '../RequestHandler';
 
-export type RequestContext = {
-  req: unknown;
-  res: unknown;
-};
-
-export abstract class Controller<TContext extends RequestContext>
-  implements RequestHandler<TContext>
-{
+export abstract class Controller<TContext> implements RequestHandler<TContext> {
   protected abstract executeImpl(ctx: TContext): Promise<void>;
 
   protected abstract handleError(error: unknown): unknown;

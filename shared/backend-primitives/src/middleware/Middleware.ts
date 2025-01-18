@@ -1,11 +1,11 @@
 import { type Promisable } from 'type-fest';
 
-import { Controller, type RequestContext } from '../controller/Controller';
+import { Controller } from '../controller/Controller';
 
 type NextFunction = (...args: unknown[]) => Promisable<void>;
 
 export abstract class Middleware<
-  TContext extends RequestContext & {
+  TContext extends {
     next: NextFunction;
   },
 > extends Controller<TContext> {
