@@ -2,6 +2,7 @@
 
 # dotenv environment variable files
 
+.direnv
 *.env
 *.env.*
 !*.env.example*
